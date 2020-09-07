@@ -76,3 +76,38 @@ age = round(rnorm(10,mean = 25,sd = 2),1)
 gender = sample(c('M','F'),size = 10, replace = T)
 df2 = data.frame(rollno,name,age,gender)
 df2
+
+#Data Subsetting
+df2[1,]
+
+df2[,3]
+
+df2[1:3,2]
+
+
+#Subsetting a vector
+x <- c(2.1,4.2,3.3,5.4) #vector x
+x #Display
+x[c(3,1)] # only 1, 3rd element
+x[-c(3,1)] # omit 1, 3rd element
+x[c(TRUE,TRUE,FALSE,FALSE)] #only postions that are deemed true in here
+x[x>3] #Values greater than 3
+
+#Named Vector
+y <- setNames(x,letters[1:4])
+#extraction with column names
+y[c("d","c","a")]
+
+#Substetting using matrix
+a <- matrix(1:9, nrow = 3)
+colnames(a) <- c("A","B","C")
+a
+
+a[1:2,]
+a[3,3]
+a[-2,-2]
+
+#Subsetting a Data Frame
+df <- data.frame(x = 1:3, y = 3:1,z = letters[1:3])
+df
+df[df$x == 2,]
