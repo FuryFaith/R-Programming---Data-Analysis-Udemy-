@@ -111,3 +111,26 @@ a[-2,-2]
 df <- data.frame(x = 1:3, y = 3:1,z = letters[1:3])
 df
 df[df$x == 2,]
+
+set.seed(1234)
+x <- round(matrix(rnorm(30,1),ncol = 5),2)
+y <- c(1,seq(5))
+x <- cbind(x,y)
+x
+
+x.df <- data.frame(x)
+x.df
+subset(x.df, y>2)
+
+subset(x.df, y > 2 & V1 >0.2, select = c(V1,V4))
+
+letters
+which(letters == "z")
+
+which(women$height == 66)
+which(women$height >= 70)
+letters[which(letters > 12)]
+
+names = c('jack','jill','tom','jerry','buugs','bunny')
+grep('[bu]',names,ignore.case = T)
+names[grep('[bu]',names,ignore.case = T)]
