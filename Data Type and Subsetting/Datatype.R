@@ -134,3 +134,7 @@ letters[which(letters > 12)]
 names = c('jack','jill','tom','jerry','buugs','bunny')
 grep('[bu]',names,ignore.case = T)
 names[grep('[bu]',names,ignore.case = T)]
+
+mtcars
+which(mtcars$mpg > 25)
+mtcars[which(mtcars$mpg > 25),]
